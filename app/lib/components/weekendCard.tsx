@@ -16,7 +16,7 @@ function WeekendCard ({
 
     return (
         <>
-            <Card sx={{ maxWidth: 345 }} className="rounded-xl" elevation={0}>
+            <Card className="rounded-xl m-5" sx={{maxWidth: '384px'}} elevation={0}>
                 <CardHeader 
                     title="Is het al weekend?" 
                     subheader={'Het is vandaag ' + dagen[new Date().getDay()] + (weekend ? ', dat betekend weekend!' : '')}
