@@ -1,5 +1,4 @@
-import { isItWeekend } from "@/app/lib/helpers/functions";
-import WeekendCard from "./lib/components/weekendCard";
+import WeekendCard from "@/app/lib/components/weekendCard";
 
 export default function Home() {
 
@@ -7,9 +6,7 @@ export default function Home() {
 
     return (
         <main className="flex h-screen items-center justify-center">
-            <WeekendCard 
-                weekend={weekend} 
-            />
+            <WeekendCard />
         </main>
     );
 }
