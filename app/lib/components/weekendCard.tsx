@@ -1,18 +1,24 @@
+'use client';
+
 import { CardMedia } from "@mui/material"
 import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import CardHeader from "@mui/material/CardHeader"
 import Typography from "@mui/material/Typography"
 import Image from "next/image"
+import { isItWeekend } from "@/app/lib/helpers/functions";
 
-
-function WeekendCard ({
-    weekend
-}: {
-    weekend: boolean
-}) {
+function WeekendCard () {
 
     const dagen = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
+
+    const [weekend, setWeekend] = useState<boolean>(isItWeekend());
+
+    useEffect(() => {
+      return () => {
+        setWeekend(isItWeekend());
+      }
+    }, [])
 
     return (
         <>
