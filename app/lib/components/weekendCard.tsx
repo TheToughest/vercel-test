@@ -7,6 +7,7 @@ import CardHeader from "@mui/material/CardHeader"
 import Typography from "@mui/material/Typography"
 import Image from "next/image"
 import { isItWeekend } from "@/app/lib/helpers/functions";
+import { useState, useEffect } from 'react';
 
 function WeekendCard () {
 
